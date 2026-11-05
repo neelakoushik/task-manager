@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Task Manager</h1>
+    <p class="sub" id="count">0 tasks left</p>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="80" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Completed</button>
+    </div>
+
+    <ul id="taskList"></ul>
+    <p id="empty" class="empty">No tasks here. Add one above.</p>
+
+    <button id="clearDone" class="link-btn">Clear completed tasks</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

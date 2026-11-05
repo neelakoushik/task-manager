@@ -1,0 +1,89 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  background: #eef3f8;
+  color: #1c2733;
+  padding: 24px 14px;
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 26px;
+  border-radius: 10px;
+  border: 1px solid #d9e1ea;
+}
+
+h1 { font-size: 1.6rem; }
+.sub { color: #55616e; margin: 4px 0 18px; }
+
+#taskForm { display: flex; gap: 8px; margin-bottom: 16px; }
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #b7c3d0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  min-width: 0;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2a5bd7;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+button:hover { background: #1f46aa; }
+
+.filters { display: flex; gap: 8px; margin-bottom: 12px; }
+.filter { background: #eef3f8; color: #1c2733; padding: 6px 14px; font-size: 0.9rem; }
+.filter:hover { background: #dfe9f6; }
+.filter.active { background: #1c2733; color: #fff; }
+
+ul { list-style: none; }
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 0;
+  border-bottom: 1px solid #e3e9f0;
+}
+li input[type="checkbox"] { width: 18px; height: 18px; flex-shrink: 0; }
+li .title { flex: 1; word-break: break-word; }
+li.done .title { text-decoration: line-through; color: #8a97a5; }
+
+.small {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  background: #eef3f8;
+  color: #1c2733;
+}
+.small:hover { background: #dfe9f6; }
+.small.danger { color: #b3261e; }
+.small.danger:hover { background: #fdecea; }
+
+.edit-input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #2a5bd7;
+  border-radius: 6px;
+  min-width: 0;
+}
+
+.empty { color: #55616e; padding: 14px 0; }
+.link-btn { margin-top: 14px; background: none; color: #2a5bd7; padding: 0; font-size: 0.9rem; }
+.link-btn:hover { background: none; text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .app { padding: 18px; }
+  #taskForm { flex-direction: column; }
+}
